@@ -10,6 +10,8 @@ git clone https://github.com/zqyaila/aila-neteaseMusic-plugin.git ./plugins/aila
 > [!NOTE]
 > 如果你的网络环境较差，无法连接到 Github，可以使用 [GitHub Proxy](https://ghproxy.link/) 提供的文件代理加速下载服务
 >
+
+#### 2.配置token前往网页网易云登录，按f12中的网络，随便找一个请求，找到元素中的cookie，将MUSIC_U=以及后面的值复制到config/netease_cookie.txt
 /**
  * 网易云音乐解析与搜索插件
  * 适配 TRSS-Yunzai + NapCat (OneBot v11)
