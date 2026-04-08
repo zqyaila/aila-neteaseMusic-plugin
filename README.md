@@ -1,4 +1,15 @@
 # aila-neteaseMusic-plugin
+## 安装插件
+
+#### 1. 克隆仓库
+
+```
+git clone https://github.com/zqyaila/aila-neteaseMusic-plugin.git ./plugins/aila-neteaseMusic-plugin
+```
+
+> [!NOTE]
+> 如果你的网络环境较差，无法连接到 Github，可以使用 [GitHub Proxy](https://ghproxy.link/) 提供的文件代理加速下载服务
+>
 /**
  * 网易云音乐解析与搜索插件
  * 适配 TRSS-Yunzai + NapCat (OneBot v11)
