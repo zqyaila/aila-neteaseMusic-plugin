@@ -4,6 +4,7 @@ import crypto from 'crypto'
 import fs from 'fs'
 import path from 'path'
 import { createWriteStream } from 'fs'
+import { Readable } from 'stream'
 import { fileURLToPath } from 'url'
 import os from 'os'
 
@@ -380,8 +381,9 @@ async function downloadToTmp(url, ext) {
     const writer = createWriteStream(filepath)
     writer.on('error', reject)
     writer.on('close', resolve)
-    res.body.on('error', reject)
-    res.body.pipe(writer)
+    const nodeStream = Readable.fromWeb(res.body)
+nodeStream.on('error', reject)
+nodeStream.pipe(writer)
   })
 
   // 验证文件
